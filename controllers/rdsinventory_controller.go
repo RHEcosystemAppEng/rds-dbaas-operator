@@ -1071,7 +1071,7 @@ func (r *RDSInventoryReconciler) createOrUpdateConfigMap(ctx context.Context, cl
 			ackEnableDevelopmentLogging: "false",
 			ackWatchNamespace:           "",
 			ackLogLevel:                 "info",
-			ackResourceTags:             "rhoda",
+			ackResourceTags:             "dbaas",
 		}
 		if credentialsRef != nil {
 			cm.Data[awsRegion] = string(credentialsRef.Data[awsRegion])
@@ -1192,7 +1192,7 @@ func createAdoptedResource(resourceIdentifier *string, resourceArn *string, engi
 	return &ackv1alpha1.AdoptedResource{
 		ObjectMeta: metav1.ObjectMeta{
 			Namespace: inventory.Namespace,
-			Name:      fmt.Sprintf("rhoda-adopted-%s%s-%s", getDBEngineAbbreviation(engine), strings.ToLower(*resourceIdentifier), uuid.NewUUID()),
+			Name:      fmt.Sprintf("dbaas-adopted-%s%s-%s", getDBEngineAbbreviation(engine), strings.ToLower(*resourceIdentifier), uuid.NewUUID()),
 			Annotations: map[string]string{
 				"managed-by":      "rds-dbaas-operator",
 				"owner":           inventory.Name,

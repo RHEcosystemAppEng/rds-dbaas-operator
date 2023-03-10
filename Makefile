@@ -8,11 +8,11 @@ OPERATOR_SDK_VERSION ?= v1.25.4
 # To re-generate a bundle for another specific version without changing the standard setup, you can:
 # - use the VERSION as arg of the bundle target (e.g make bundle VERSION=0.0.2)
 # - use environment variables to overwrite this value (e.g export VERSION=0.0.2)
-VERSION ?= 0.3.0
+VERSION ?= 0.4.0
 
 RDS_VERSION ?= 0.1.3
 
-# QUAY_ORG indicates the organization that docker images will be build for & pushed to
+# ORG indicates the organization that docker images will be build for & pushed to
 # CHANGE THIS TO YOUR OWN QUAY USERNAME FOR DEV/TESTING/PUSHING
 ORG ?= ecosystem-appeng
 

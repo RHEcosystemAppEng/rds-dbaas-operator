@@ -1374,7 +1374,7 @@ var _ = Describe("RDSInventoryController", func() {
 				// Available
 				mockDBInstance1 := &rdsv1alpha1.DBInstance{
 					ObjectMeta: metav1.ObjectMeta{
-						Name:      "rhoda-adopted-postgres-mock-db-instance-1",
+						Name:      "dbaas-adopted-postgres-mock-db-instance-1",
 						Namespace: testNamespace,
 					},
 					Spec: rdsv1alpha1.DBInstanceSpec{
@@ -1388,7 +1388,7 @@ var _ = Describe("RDSInventoryController", func() {
 				// Available
 				mockDBInstance2 := &rdsv1alpha1.DBInstance{
 					ObjectMeta: metav1.ObjectMeta{
-						Name:      "rhoda-adopted-postgres-mock-db-instance-2",
+						Name:      "dbaas-adopted-postgres-mock-db-instance-2",
 						Namespace: testNamespace,
 					},
 					Spec: rdsv1alpha1.DBInstanceSpec{
@@ -1402,7 +1402,7 @@ var _ = Describe("RDSInventoryController", func() {
 				// Available
 				mockDBInstance3 := &rdsv1alpha1.DBInstance{
 					ObjectMeta: metav1.ObjectMeta{
-						Name:      "rhoda-adopted-postgres-mock-db-instance-3",
+						Name:      "dbaas-adopted-postgres-mock-db-instance-3",
 						Namespace: testNamespace,
 					},
 					Spec: rdsv1alpha1.DBInstanceSpec{
@@ -1416,7 +1416,7 @@ var _ = Describe("RDSInventoryController", func() {
 				// Available
 				mockDBInstance4 := &rdsv1alpha1.DBInstance{
 					ObjectMeta: metav1.ObjectMeta{
-						Name:      "rhoda-adopted-postgres-mock-db-instance-4",
+						Name:      "dbaas-adopted-postgres-mock-db-instance-4",
 						Namespace: testNamespace,
 					},
 					Spec: rdsv1alpha1.DBInstanceSpec{
@@ -1463,7 +1463,7 @@ var _ = Describe("RDSInventoryController", func() {
 				// Adopted ARN not match AWS
 				mockDBInstance7 := &rdsv1alpha1.DBInstance{
 					ObjectMeta: metav1.ObjectMeta{
-						Name:      "rhoda-adopted-mysql-mock-db-instance-7",
+						Name:      "dbaas-adopted-mysql-mock-db-instance-7",
 						Namespace: testNamespace,
 					},
 					Spec: rdsv1alpha1.DBInstanceSpec{
@@ -1476,7 +1476,7 @@ var _ = Describe("RDSInventoryController", func() {
 				adoptedMockInstance7ARN := ackv1alpha1.AWSResourceName("mock-db-instance-7-0")
 				adoptedMockInstance7 := &ackv1alpha1.AdoptedResource{
 					ObjectMeta: metav1.ObjectMeta{
-						Name:      "rhoda-adopted-mock-db-instance-7",
+						Name:      "dbaas-adopted-mock-db-instance-7",
 						Namespace: testNamespace,
 					},
 					Spec: ackv1alpha1.AdoptedResourceSpec{
@@ -1535,7 +1535,7 @@ var _ = Describe("RDSInventoryController", func() {
 				// Available
 				mockDBCluster1 := &rdsv1alpha1.DBCluster{
 					ObjectMeta: metav1.ObjectMeta{
-						Name:      "rhoda-adopted-postgres-mock-db-cluster-1",
+						Name:      "dbaas-adopted-postgres-mock-db-cluster-1",
 						Namespace: testNamespace,
 					},
 					Spec: rdsv1alpha1.DBClusterSpec{
@@ -1549,7 +1549,7 @@ var _ = Describe("RDSInventoryController", func() {
 				// Available
 				mockDBCluster2 := &rdsv1alpha1.DBCluster{
 					ObjectMeta: metav1.ObjectMeta{
-						Name:      "rhoda-adopted-postgres-mock-db-cluster-2",
+						Name:      "dbaas-adopted-postgres-mock-db-cluster-2",
 						Namespace: testNamespace,
 					},
 					Spec: rdsv1alpha1.DBClusterSpec{
@@ -1563,7 +1563,7 @@ var _ = Describe("RDSInventoryController", func() {
 				// Available
 				mockDBCluster3 := &rdsv1alpha1.DBCluster{
 					ObjectMeta: metav1.ObjectMeta{
-						Name:      "rhoda-adopted-postgres-mock-db-cluster-3",
+						Name:      "dbaas-adopted-postgres-mock-db-cluster-3",
 						Namespace: testNamespace,
 					},
 					Spec: rdsv1alpha1.DBClusterSpec{
@@ -1577,7 +1577,7 @@ var _ = Describe("RDSInventoryController", func() {
 				// Available
 				mockDBCluster4 := &rdsv1alpha1.DBCluster{
 					ObjectMeta: metav1.ObjectMeta{
-						Name:      "rhoda-adopted-postgres-mock-db-cluster-4",
+						Name:      "dbaas-adopted-postgres-mock-db-cluster-4",
 						Namespace: testNamespace,
 					},
 					Spec: rdsv1alpha1.DBClusterSpec{
@@ -1624,7 +1624,7 @@ var _ = Describe("RDSInventoryController", func() {
 				// Adopted ARN not match AWS
 				mockDBCluster7 := &rdsv1alpha1.DBCluster{
 					ObjectMeta: metav1.ObjectMeta{
-						Name:      "rhoda-adopted-mysql-mock-db-cluster-7",
+						Name:      "dbaas-adopted-mysql-mock-db-cluster-7",
 						Namespace: testNamespace,
 					},
 					Spec: rdsv1alpha1.DBClusterSpec{
@@ -1637,7 +1637,7 @@ var _ = Describe("RDSInventoryController", func() {
 				adoptedMockCluster7ARN := ackv1alpha1.AWSResourceName("mock-db-cluster-7-0")
 				adoptedMockCluster7 := &ackv1alpha1.AdoptedResource{
 					ObjectMeta: metav1.ObjectMeta{
-						Name:      "rhoda-adopted-mock-db-cluster-7",
+						Name:      "dbaas-adopted-mock-db-cluster-7",
 						Namespace: testNamespace,
 					},
 					Spec: ackv1alpha1.AdoptedResourceSpec{
@@ -1781,7 +1781,7 @@ var _ = Describe("RDSInventoryController", func() {
 							if instance, ok := dbResourcesMap["mock-db-instance-1"]; !ok {
 								return false
 							} else {
-								if !strings.HasPrefix(instance.Name, "rhoda-adopted-postgres-mock-db-instance-1") {
+								if !strings.HasPrefix(instance.Name, "dbaas-adopted-postgres-mock-db-instance-1") {
 									return false
 								}
 								typeString, typeOk := instance.GetAnnotations()[ophandler.TypeAnnotation]
@@ -1803,7 +1803,7 @@ var _ = Describe("RDSInventoryController", func() {
 							if instance, ok := dbResourcesMap["mock-db-instance-2"]; !ok {
 								return false
 							} else {
-								if !strings.HasPrefix(instance.Name, "rhoda-adopted-postgres-mock-db-instance-2") {
+								if !strings.HasPrefix(instance.Name, "dbaas-adopted-postgres-mock-db-instance-2") {
 									return false
 								}
 								typeString, typeOk := instance.GetAnnotations()[ophandler.TypeAnnotation]
@@ -1825,7 +1825,7 @@ var _ = Describe("RDSInventoryController", func() {
 							if instance, ok := dbResourcesMap["mock-db-instance-3"]; !ok {
 								return false
 							} else {
-								if !strings.HasPrefix(instance.Name, "rhoda-adopted-postgres-mock-db-instance-3") {
+								if !strings.HasPrefix(instance.Name, "dbaas-adopted-postgres-mock-db-instance-3") {
 									return false
 								}
 								typeString, typeOk := instance.GetAnnotations()[ophandler.TypeAnnotation]
@@ -1847,7 +1847,7 @@ var _ = Describe("RDSInventoryController", func() {
 							if instance, ok := dbResourcesMap["mock-db-instance-4"]; !ok {
 								return false
 							} else {
-								if !strings.HasPrefix(instance.Name, "rhoda-adopted-postgres-mock-db-instance-4") {
+								if !strings.HasPrefix(instance.Name, "dbaas-adopted-postgres-mock-db-instance-4") {
 									return false
 								}
 								typeString, typeOk := instance.GetAnnotations()[ophandler.TypeAnnotation]
@@ -1869,7 +1869,7 @@ var _ = Describe("RDSInventoryController", func() {
 							if instance, ok := dbResourcesMap["mock-db-instance-7"]; !ok {
 								return false
 							} else {
-								if !strings.HasPrefix(instance.Name, "rhoda-adopted-mysql-mock-db-instance-7") {
+								if !strings.HasPrefix(instance.Name, "dbaas-adopted-mysql-mock-db-instance-7") {
 									return false
 								}
 								typeString, typeOk := instance.GetAnnotations()[ophandler.TypeAnnotation]
@@ -1940,7 +1940,7 @@ var _ = Describe("RDSInventoryController", func() {
 							if cluster, ok := dbResourcesMap["mock-db-cluster-1"]; !ok {
 								return false
 							} else {
-								if !strings.HasPrefix(cluster.Name, "rhoda-adopted-postgres-mock-db-cluster-1") {
+								if !strings.HasPrefix(cluster.Name, "dbaas-adopted-postgres-mock-db-cluster-1") {
 									return false
 								}
 								typeString, typeOk := cluster.GetAnnotations()[ophandler.TypeAnnotation]
@@ -1962,7 +1962,7 @@ var _ = Describe("RDSInventoryController", func() {
 							if cluster, ok := dbResourcesMap["mock-db-cluster-2"]; !ok {
 								return false
 							} else {
-								if !strings.HasPrefix(cluster.Name, "rhoda-adopted-mysql-mock-db-cluster-2") {
+								if !strings.HasPrefix(cluster.Name, "dbaas-adopted-mysql-mock-db-cluster-2") {
 									return false
 								}
 								typeString, typeOk := cluster.GetAnnotations()[ophandler.TypeAnnotation]
@@ -1984,7 +1984,7 @@ var _ = Describe("RDSInventoryController", func() {
 							if cluster, ok := dbResourcesMap["mock-db-cluster-3"]; !ok {
 								return false
 							} else {
-								if !strings.HasPrefix(cluster.Name, "rhoda-adopted-aurora-mock-db-cluster-3") {
+								if !strings.HasPrefix(cluster.Name, "dbaas-adopted-aurora-mock-db-cluster-3") {
 									return false
 								}
 								typeString, typeOk := cluster.GetAnnotations()[ophandler.TypeAnnotation]
@@ -2006,7 +2006,7 @@ var _ = Describe("RDSInventoryController", func() {
 							if cluster, ok := dbResourcesMap["mock-db-cluster-4"]; !ok {
 								return false
 							} else {
-								if !strings.HasPrefix(cluster.Name, "rhoda-adopted-aurora-postgres-mock-db-cluster-4") {
+								if !strings.HasPrefix(cluster.Name, "dbaas-adopted-aurora-postgres-mock-db-cluster-4") {
 									return false
 								}
 								typeString, typeOk := cluster.GetAnnotations()[ophandler.TypeAnnotation]
@@ -2028,7 +2028,7 @@ var _ = Describe("RDSInventoryController", func() {
 							if cluster, ok := dbResourcesMap["mock-db-cluster-7"]; !ok {
 								return false
 							} else {
-								if !strings.HasPrefix(cluster.Name, "rhoda-adopted-aurora-mysql-mock-db-cluster-7") {
+								if !strings.HasPrefix(cluster.Name, "dbaas-adopted-aurora-mysql-mock-db-cluster-7") {
 									return false
 								}
 								typeString, typeOk := cluster.GetAnnotations()[ophandler.TypeAnnotation]

@@ -32,7 +32,8 @@ spec:
           metadata:
             type: object
           spec:
-            description: Defines the desired state of a DBaaSInstance object.
+            description: DBaaSInstanceSpec defines the desired state of a DBaaSInstance
+              object.
             properties:
               inventoryRef:
                 description: A reference to the relevant DBaaSInventory custom resource
@@ -57,7 +58,7 @@ spec:
             - inventoryRef
             type: object
           status:
-            description: Defines the observed state of a DBaaSInstance.
+            description: DBaaSInstanceStatus defines the observed state of a DBaaSInstance.
             properties:
               conditions:
                 items:

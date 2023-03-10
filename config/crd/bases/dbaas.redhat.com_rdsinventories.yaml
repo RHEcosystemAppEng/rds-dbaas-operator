@@ -33,7 +33,8 @@ spec:
           metadata:
             type: object
           spec:
-            description: Defines the inventory specifications for the provider's operators.
+            description: DBaaSInventorySpec defines the inventory specifications for
+              the provider's operators.
             properties:
               credentialsRef:
                 description: The secret containing the provider-specific connection
@@ -52,8 +53,8 @@ spec:
             - credentialsRef
             type: object
           status:
-            description: Defines the inventory status that the provider's operator
-              uses.
+            description: DBaaSInventoryStatus defines the inventory status that the
+              provider's operator uses.
             properties:
               conditions:
                 items:
@@ -127,7 +128,8 @@ spec:
                 description: A list of database services returned from querying the
                   database provider.
                 items:
-                  description: Defines the information of a database service.
+                  description: DatabaseService defines the information of a database
+                    service.
                   properties:
                     serviceID:
                       description: A provider-specific identifier for the database

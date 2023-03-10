@@ -44,7 +44,7 @@ import (
 const (
 	databaseServiceIDKey = ".spec.databaseServiceID"
 
-	databaseProvider = "Red Hat DBaaS / Amazon Relational Database Service (RDS)"
+	databaseProvider = "OpenShift Database Access / Amazon Relational Database Service (RDS)"
 
 	connectionConditionReady = "ReadyForBinding"
 

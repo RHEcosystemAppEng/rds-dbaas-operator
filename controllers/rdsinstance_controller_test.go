@@ -234,8 +234,8 @@ var _ = Describe("RDSInstanceController", func() {
 							if dbInstance.Spec.DBInstanceIdentifier == nil {
 								return false
 							}
-							Expect(strings.HasPrefix(*dbInstance.Spec.DBInstanceIdentifier, "rhoda-postgres-")).Should(BeTrue())
-							id := strings.TrimPrefix(*dbInstance.Spec.DBInstanceIdentifier, "rhoda-postgres-")
+							Expect(strings.HasPrefix(*dbInstance.Spec.DBInstanceIdentifier, "dbaas-postgres-")).Should(BeTrue())
+							id := strings.TrimPrefix(*dbInstance.Spec.DBInstanceIdentifier, "dbaas-postgres-")
 							_, err := uuid.Parse(id)
 							Expect(err).ShouldNot(HaveOccurred())
 							if dbInstance.Spec.PubliclyAccessible == nil || *dbInstance.Spec.PubliclyAccessible != true {

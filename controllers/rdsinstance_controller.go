@@ -455,7 +455,7 @@ func (r *RDSInstanceReconciler) setDBInstanceSpec(ctx context.Context, dbInstanc
 				return fmt.Errorf(invalidParameterErrorTemplate, "DBInstanceIdentifier")
 			}
 		} else {
-			dbInstance.Spec.DBInstanceIdentifier = pointer.String(fmt.Sprintf("rhoda-%s%s", getDBEngineAbbreviation(dbInstance.Spec.Engine), string(uuid.NewUUID())))
+			dbInstance.Spec.DBInstanceIdentifier = pointer.String(fmt.Sprintf("dbaas-%s%s", getDBEngineAbbreviation(dbInstance.Spec.Engine), string(uuid.NewUUID())))
 		}
 	}
 
