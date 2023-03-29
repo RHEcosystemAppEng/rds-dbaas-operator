@@ -564,7 +564,7 @@ var _ = Describe("RDSConnectionController", func() {
 														Expect(t).Should(Equal("postgresql"))
 														provider, providerOk := configmap.Data["provider"]
 														Expect(providerOk).Should(BeTrue())
-														Expect(provider).Should(Equal("Red Hat DBaaS / Amazon Relational Database Service (RDS)"))
+														Expect(provider).Should(Equal("OpenShift Database Access / Amazon Relational Database Service (RDS)"))
 														host, hostOk := configmap.Data["host"]
 														Expect(hostOk).Should(BeTrue())
 														Expect(host).Should(Equal("address-connection-controller"))
@@ -706,7 +706,7 @@ var _ = Describe("RDSConnectionController", func() {
 					Expect(t).Should(Equal("oracle"))
 					provider, providerOk := configmap.Data["provider"]
 					Expect(providerOk).Should(BeTrue())
-					Expect(provider).Should(Equal("Red Hat DBaaS / Amazon Relational Database Service (RDS)"))
+					Expect(provider).Should(Equal("OpenShift Database Access / Amazon Relational Database Service (RDS)"))
 					host, hostOk := configmap.Data["host"]
 					Expect(hostOk).Should(BeTrue())
 					Expect(host).Should(Equal("address-oracle-connection-controller"))
@@ -791,7 +791,7 @@ var _ = Describe("RDSConnectionController", func() {
 					Expect(t).Should(Equal("sqlserver"))
 					provider, providerOk := configmap.Data["provider"]
 					Expect(providerOk).Should(BeTrue())
-					Expect(provider).Should(Equal("Red Hat DBaaS / Amazon Relational Database Service (RDS)"))
+					Expect(provider).Should(Equal("OpenShift Database Access / Amazon Relational Database Service (RDS)"))
 					host, hostOk := configmap.Data["host"]
 					Expect(hostOk).Should(BeTrue())
 					Expect(host).Should(Equal("address-sqlserver-connection-controller"))
@@ -1258,7 +1258,7 @@ var _ = Describe("RDSConnectionController", func() {
 														Expect(t).Should(Equal("postgresql"))
 														provider, providerOk := configmap.Data["provider"]
 														Expect(providerOk).Should(BeTrue())
-														Expect(provider).Should(Equal("Red Hat DBaaS / Amazon Relational Database Service (RDS)"))
+														Expect(provider).Should(Equal("OpenShift Database Access / Amazon Relational Database Service (RDS)"))
 														host, hostOk := configmap.Data["host"]
 														Expect(hostOk).Should(BeTrue())
 														Expect(host).Should(Equal("address-connection-controller"))
