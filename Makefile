@@ -17,7 +17,7 @@ RDS_VERSION ?= 0.1.3
 ORG ?= ecosystem-appeng
 
 # CATALOG_BASE_IMG defines an existing catalog version to build on & add bundles to
-CATALOG_BASE_IMG ?= quay.io/ecosystem-appeng/rds-dbaas-operator-catalog:v0.2.0
+CATALOG_BASE_IMG ?= quay.io/ecosystem-appeng/rds-dbaas-operator-catalog:v0.3.0
 
 # CHANNELS define the bundle channels used in the bundle.
 # Add a new line here if you would like to change its default config. (E.g CHANNELS = "candidate,fast,stable")
